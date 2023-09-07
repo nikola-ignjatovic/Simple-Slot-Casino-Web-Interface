@@ -1,0 +1,2 @@
+1.Add button effects on selection of studio
+2.Add default alt src for broken images

@@ -1,0 +1,139 @@
+/* FilterMenu.css */
+.active {
+  background-color: #007bff; /* Change the background color to your desired highlight color */
+  color: #fff; /* Change the text color for better contrast */
+  /* Add any other styles to make the button stand out */
+}
+
+/* Add CSS rule for the pointer-downward arrow */
+.show-more-button {
+  position: relative;
+}
+
+.show-more-button::after {
+  content: "\u25BE"; /* Unicode for downward-pointing triangle */
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+.highlighted {
+  background-color: #007bff; /* Change the background color to your preferred highlight color */
+  color: #fff; /* Change the text color to contrast with the background */
+  /* Add any other styles you want for the highlighted state */
+  display: none;
+}
+
+/* CSS for FilterMenu component */
+
+/* Style for the filter bar container */
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-section {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Style for the buttons container */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
+  gap: 10px; /* Adjust the gap between buttons */
+  padding-bottom: 10px;
+}
+
+/* Style for individual buttons */
+.filter-buttons button {
+  padding: 10px; /* Add padding */
+  border: none; /* Remove border */
+  background-color: #fff;
+  color: black;
+
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+/* Style for the active button */
+.filter-buttons button.active {
+  background-color: #007bff; /* Change the background color for the active button */
+  color: #fff; /* Change the text color for the active button */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjust the layout for smaller screens */
+  .filter-section {
+    margin-right: 10px;
+  }
+
+  /* Reduce the gap between buttons */
+  .filter-buttons {
+    gap: 5px;
+  }
+
+  /* Make buttons smaller on smaller screens */
+  .filter-buttons button {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Add this CSS to your stylesheet */
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Remove default arrow */
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  width: 75px;
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+  line-height: 1;
+  color: #555;
+}
+
+/* Add this CSS to your stylesheet */
+
+/* Style for the buttons */
+button.filter-button {
+  width: 120px; /* Adjust the width as needed */
+  padding: 10px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for button */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button.filter-button:hover {
+  background-color: #2980b9;
+}
